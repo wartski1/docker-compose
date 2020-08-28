@@ -1,0 +1,23 @@
+version: '3.4'
+services:
+  db:
+    image: linuxserver/mariadb
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: 1234
+      MYSQL_DATABASE: database
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 1234
+
+  back:
+    image: wartski/back_nestjs:v1.0.0
+    ports:
+      - 3000:3000
+    depends_on:
+      - db
+
+  front:
+    image: wartski/front_angularjs:v1.0.0
+    ports:
+      - 4000:4000
