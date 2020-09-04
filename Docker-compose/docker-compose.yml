@@ -11,13 +11,21 @@ services:
       MYSQL_PASSWORD: 1234
 
   back:
-    image: wartski/back_nestjs:v1.0.0
+    image: wartski/back_nestjs:v1.1.0
     ports:
       - 3000:3000
+    environment:
+      PORT: 3306
+      HOST: db
+      DATABASE: database
+      USER: root
+      PASS: 1234
     depends_on:
       - db
 
   front:
-    image: wartski/front_angularjs:v1.0.0
+    image: wartski/front_angularjs:v1.1.0
     ports:
       - 4000:4000
+    environment:
+      API: http://localhost:3000/api
