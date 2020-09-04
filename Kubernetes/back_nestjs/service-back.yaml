@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: back-nestjs
+  labels:
+    app: back-nestjs
+spec:
+  type: NodePort
+  selector:
+    app: back-nestjs
+  ports:
+    - protocol: TCP
+      nodePort: 30002
+      port: 3000

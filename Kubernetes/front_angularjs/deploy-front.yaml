@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front-angularjs
+  labels:
+    app: front-angularjs
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: front-angularjs
+  template:
+    metadata:
+      labels:
+        app: front-angularjs
+    spec:
+      containers:
+      - name: front-angularjs
+        image: wartski/front_angularjs:v1.1.0
+        ports:
+        - containerPort: 4000
+        env:
+        - name: API
+          value: back-nestjs
+        
