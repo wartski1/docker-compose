@@ -10,5 +10,5 @@ spec:
     app: back-nestjs
   ports:
     - protocol: TCP
-      nodePort: 30002
+      nodePort: 30101
       port: 3000

@@ -10,5 +10,5 @@ spec:
     app: mysql
   ports:
     - protocol: TCP
-      nodePort: 30001
+      nodePort: 30102
       port: 3306

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: front-configs
+data:
+  PORT: '30101'
+  API: http://35.239.132.186/

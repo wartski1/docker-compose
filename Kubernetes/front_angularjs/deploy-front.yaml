@@ -16,10 +16,17 @@ spec:
     spec:
       containers:
       - name: front-angularjs
-        image: wartski/front_angularjs:v1.1.0
+        image: wartski/front_angularjs:v2.0.0
         ports:
         - containerPort: 4000
         env:
+        - name: PORT
+          valueFrom:
+            configMapKeyRef:
+              name: front-configs
+              key: PORT
         - name: API
-          value: back-nestjs
-        
+          valueFrom:
+            configMapKeyRef:
+              name: front-configs
+              key: API

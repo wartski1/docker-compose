@@ -10,5 +10,5 @@ spec:
     app: front-angularjs
   ports:
     - protocol: TCP
-      nodePort: 30003
+      nodePort: 30100
       port: 4000
