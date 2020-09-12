@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: back-nestjs
-        image: wartski/back_nestjs:v1.1.0
+        image: DOCKER_IMAGE:TAG
         ports:
         - containerPort: 3000
         env:

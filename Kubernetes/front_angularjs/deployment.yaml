@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: front-angularjs
-        image: wartski/front_angularjs:v2.0.0
+        image: DOCKER_IMAGE:TAG
         ports:
         - containerPort: 4000
         env:
